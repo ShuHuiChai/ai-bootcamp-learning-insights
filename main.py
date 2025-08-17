@@ -109,6 +109,14 @@ def main():
         with st.form('file_upload_form', clear_on_submit=True, border=False):
             file_uploads = st.file_uploader('File Uploader', accept_multiple_files=True, type='zip', key='zips')
             upload_button = st.form_submit_button('Upload files')
+        
+        st.markdown("""
+IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. The information provided here is NOT intended for actual usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters.
+
+Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output.
+
+Always consult with qualified professionals for accurate and personalized advice.
+                    """)
 
     # submit button for file upload is clicked
     if upload_button:
