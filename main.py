@@ -9,6 +9,10 @@ import pandas as pd
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 def main():
     
     # region <--------- Streamlit Page Configuration --------->
