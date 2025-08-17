@@ -12,6 +12,11 @@ import os
 import chromadb
 from dotenv import load_dotenv
 
+
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 class RAGToolInput(BaseModel):
     query: str = Field(description="The natural language question to ask about how to apply technology in the classroom that is aligned with the EdTech Masterplan 2030 and the Key Applications of Technology framework.")
 
