@@ -28,7 +28,7 @@ def create_agent_executor(dataframe:pd.DataFrame, vectorstore):
         llm = ChatOpenAI(
             model='gpt-4o-mini',
             temperature=0,
-            api_key=st.secrets('OPENAI'),
+            api_key=st.secrets['OPENAI'],
         )
 
     if not llm:
