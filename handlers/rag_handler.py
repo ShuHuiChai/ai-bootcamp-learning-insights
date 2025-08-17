@@ -15,6 +15,10 @@ from langchain.chains import RetrievalQA
 import tiktoken
 
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 def count_tokens(text):
     encoding = tiktoken.encoding_for_model('gpt-4o-mini')
     return len(encoding.encode(text))
