@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 import os
 from handlers.login_handler import check_password
@@ -8,11 +12,6 @@ from handlers.agent_builder import create_agent_executor
 import pandas as pd
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-
-
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 def main():
     
