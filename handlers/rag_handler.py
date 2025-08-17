@@ -27,7 +27,7 @@ def get_embeddings_model():
     if load_dotenv():
         API_KEY=os.getenv('OPENAI')
     else:
-        API_KEY=st.secrets('OPENAI')
+        API_KEY=st.secrets['OPENAI']
     
     return OpenAIEmbeddings(model='text-embedding-3-small', api_key=API_KEY)
 
