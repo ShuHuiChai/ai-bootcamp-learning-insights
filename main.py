@@ -99,7 +99,7 @@ def main():
                 st.markdown(message['content'])
     
     with chat_con:
-        user_message = st.chat_input('Ask me anything!')
+        user_message = st.chat_input('Ask me anything about the assignments you have uploaded!')
 
     with file_col:
         with st.form('file_upload_form', clear_on_submit=True, border=False):
