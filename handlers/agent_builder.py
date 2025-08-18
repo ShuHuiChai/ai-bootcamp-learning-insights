@@ -45,7 +45,6 @@ def create_agent_executor(dataframe:pd.DataFrame, vectorstore):
     tools = []
     
     try:
-        st.error(f'---- {dataframe} ---')
         pandas_tool = PandasAITool(dataframe=dataframe)
         tools.append(pandas_tool)
 
