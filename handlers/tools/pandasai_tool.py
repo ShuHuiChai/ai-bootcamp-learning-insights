@@ -72,11 +72,9 @@ class PandasAITool(BaseTool):
             """
             
             response = agent.invoke(context)
-            st.error(response)
             return response['output']
 
             
             
         except Exception as e:
-            st.error(f'{str(e)}')
             return f"Error: {str(e)}"
