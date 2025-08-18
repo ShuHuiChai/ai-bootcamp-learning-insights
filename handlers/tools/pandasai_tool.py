@@ -49,8 +49,6 @@ class PandasAITool(BaseTool):
                 allow_dangerous_code=True,
             )
 
-            print(self.dataframe.shape)
-            
             context = f"""
             You are analyzing student assignment performance. Your input is a containing six columns:
             
@@ -74,9 +72,11 @@ class PandasAITool(BaseTool):
             """
             
             response = agent.invoke(context)
+            st.error(response)
             return response['output']
 
             
             
         except Exception as e:
+            st.error(f'{str(e)}')
             return f"Error: {str(e)}"
