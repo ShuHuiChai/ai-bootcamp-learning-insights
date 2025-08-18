@@ -31,7 +31,7 @@ The Conversational Intelligent Insight Agent follows a structured methodology to
 
         - **PandasAI tool**: analyses the DataFrame using Langchain's Pandas dataframe agent if the query relates to the assignments uploaded and provides a response.
 
-        - **RAG tool**: retrieves information from the vectorstore about the EdTech Masterplan/KAT framework if the query relates to those areas and provides a response.
+        - **RAG tool**: retrieves information from the vectorstore about the MOE specific pedagogy and policies such as the EdTech Masterplan/KAT framework if the query relates to those areas and provides a response.
         
     - The Agent Executor consolidates responses from either or both tools (if used) and provides the final response to the user's query.
 """
